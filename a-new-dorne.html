@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jacksongs, ">
+
+
+        <title>A new Dorne // jacksongs // </title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('http://37.media.tumblr.com/3f5e020616067de43babe239328274a2/tumblr_mvy15aFi9v1rt9kxoo1_500.gif')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="/">jacksongs</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="#">
+                                        <i class="fa fa-You can add links in your config file fa-3x"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-Another social link fa-3x"></i>
+                                    </a>
+                                <p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>A new Dorne</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/pelican.html">pelican</a>
+                                <a class="post-category" href="/tag/github.html">github</a>
+                                <a class="post-category" href="/tag/wordpress.html">wordpress</a>
+                                <a class="post-category" href="/tag/mezzanine.html">mezzanine</a>
+                                <a class="post-category" href="/tag/tumblr.html">tumblr</a>
+                                <a class="post-category" href="/tag/markdown.html">markdown</a>
+                        </p>
+                </header>
+            </section>
+            <p>As a journalist, the words, pictures and videos I create are my currency.</p>
+<p>In the digital arena words and pictures flitter down news feeds, buried under the weight of the watermarked fight images and reddit-driven nattering.</p>
+<p>I have blogged before. On Tumblr. On Wordpress. Heck, I'm even a listed contributor to the most excellent Django-based CMS Mezzanine.</p>
+<p>Each platform has proven temporary, so it's time for a change. I'm going to retain a record of all content good enough to publish in Markdown format and publish it using the Python-powered static site generator Pelican. </p>
+<p>I'm going to store it like I would my high school essays, on file, and, like I would my optimistic attempts to create real-time sports data web projects, on Github.</p>
+<p>I'm choosing Markdown so I can read it with any editor. It's becoming <a href="http://www.google.com/trends/explore#q=markdown%2C%20microsoft%20word&amp;cmpt=q">more widely accepted in publishing</a> after all.</p>
+<p>I'm pursuing the python-powered static site generator Pelican for simplicity.</p>
+<p>Why static? I didn't want a database, but I still wanted to be able to combine an archive with a web framework. </p>
+<p>Having my life's work on a postgres database on a Digital Ocean, Heroku or Webfaction server somewhere didn't appeal - even if I was disciplined about backups.</p>
+<p>On the other hand no one was going to read this post if it was sitting on a folder on my hard drive (apart from government spies).</p>
+<p>I'm a Python person, so Pelican made sense. Plus, Pelican has got great integration with iPython Notebooks. Most importantly, peer pressue is powerful, and dudes like <a href="http://wrobstory.github.io/">Rob Story</a> use it.</p>
+<p>And because I need a bit of a traffic leg up, here's a photo of that new dude from Dorne in season four of Game of Thrones: </p>
+<p><img alt="Dornish dude" src="http://static.squarespace.com/static/52fc05c9e4b08fc45bd99090/t/534313fce4b00493c5010752/1396904959766/" /></p>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Jackson Gothe-Snape &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
