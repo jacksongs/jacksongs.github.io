@@ -5,35 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://jackson.gs/index.html</loc>
-<lastmod>2014-05-17T20:15:17-00:00</lastmod>
+<lastmod>2014-05-18T14:17:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://jackson.gs/archives.html</loc>
-<lastmod>2014-05-17T20:15:17-00:00</lastmod>
+<lastmod>2014-05-18T14:17:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://jackson.gs/tags.html</loc>
-<lastmod>2014-05-17T20:15:17-00:00</lastmod>
+<lastmod>2014-05-18T14:17:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://jackson.gs/categories.html</loc>
-<lastmod>2014-05-17T20:15:17-00:00</lastmod>
+<lastmod>2014-05-18T14:17:46-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://jackson.gs/pages/about-jackson.html</loc>
-<lastmod>2014-05-17T20:15:17-00:00</lastmod>
+<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://jackson.gs/dabbling-in-data-science-chapter-i.html</loc>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -42,6 +49,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://jackson.gs/a-new-dorne.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://jackson.gs/category/data-science.html</loc>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -62,6 +76,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://jackson.gs/tag/github.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://jackson.gs/tag/harvard.html</loc>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://jackson.gs/tag/python.html</loc>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -95,8 +123,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://jackson.gs/tag/cs109.html</loc>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://jackson.gs/author/jacksongs.html</loc>
-<lastmod>2014-05-05T20:42:00-00:00</lastmod>
+<lastmod>2014-05-18T13:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
