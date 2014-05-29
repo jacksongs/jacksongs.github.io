@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>jackson.gs</title><link href="jackson.gs/" rel="alternate"></link><link href="jackson.gs/feeds/web.atom.xml" rel="self"></link><id>jackson.gs/</id><updated>2014-05-05T20:42:00+10:00</updated><entry><title>A new Dorne</title><link href="jackson.gs/a-new-dorne.html" rel="alternate"></link><updated>2014-05-05T20:42:00+10:00</updated><author><name>jacksongs</name></author><id>tag:jackson.gs,2014-05-05:a-new-dorne.html</id><summary type="html">&lt;p&gt;As a journalist, the words, pictures and videos I create are my currency.&lt;/p&gt;
+&lt;p&gt;In the digital arena words and pictures flitter down news feeds, buried under the weight of watermarked fight scenes and reddit-driven ranting.&lt;/p&gt;
+&lt;p&gt;I have blogged before. On Tumblr. On Wordpress. Heck, I'm even a listed contributor to the most excellent Django-based CMS Mezzanine.&lt;/p&gt;
+&lt;p&gt;But each platform has proven temporary, mostly because I can't justify the the time required to blog brilliantly.&lt;/p&gt;
+&lt;p&gt;But &lt;em&gt;archiving?&lt;/em&gt; Now that's sexy, particularly if I open it to the world.&lt;/p&gt;
+&lt;p&gt;I'm going to retain a record of all of my content interesting enough to me to keep in Markdown format and publish it using the Python-powered static site generator Pelican. &lt;/p&gt;
+&lt;p&gt;I'm going to store it like I would my high school essays, on file, and, like I would my optimistic attempts to create real-time sports data web projects, on Github.&lt;/p&gt;
+&lt;p&gt;I'm choosing Markdown so I can read it with any text editor. It's becoming &lt;a href="http://www.google.com/trends/explore#q=markdown%2C%20microsoft%20word&amp;amp;cmpt=q"&gt;more widely accepted in publishing&lt;/a&gt; after all.&lt;/p&gt;
+&lt;p&gt;I'm pursuing the python-powered static site generator Pelican for simplicity.&lt;/p&gt;
+&lt;p&gt;Why static? I didn't want a database, but I still wanted to be able to combine an archive with a web framework. &lt;/p&gt;
+&lt;p&gt;Having my life's work on a postgres database on a Digital Ocean, Heroku or Webfaction server somewhere didn't appeal - even if I was disciplined about backups.&lt;/p&gt;
+&lt;p&gt;On the other hand no one was going to read this post if it was sitting on a folder on my hard drive (apart from government spies).&lt;/p&gt;
+&lt;p&gt;I'm a Python person, so Pelican made sense. Plus, Pelican offers great integration with iPython Notebooks. Most importantly, peer pressue is powerful, and dudes like &lt;a href="http://wrobstory.github.io/"&gt;Rob Story&lt;/a&gt; use it.&lt;/p&gt;
+&lt;p&gt;So that's that. &lt;/p&gt;
+&lt;p&gt;Game of Thrones? Well how else am I going to convince you to read 300 words of drivel? So as not to disappoint, here's a photo of that new dude from Dorne in season four of Game of Thrones, Super Mario*: &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Dornish dude" src="http://static.squarespace.com/static/52fc05c9e4b08fc45bd99090/t/534313fce4b00493c5010752/1396904959766/" /&gt;&lt;/p&gt;
+&lt;p&gt;*almost certainly not his name.&lt;/p&gt;</summary><category term="pelican"></category><category term="github"></category><category term="wordpress"></category><category term="mezzanine"></category><category term="tumblr"></category><category term="markdown"></category></entry></feed>
