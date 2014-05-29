@@ -1678,13 +1678,20 @@ init_mathjax();
     <meta name="description" content="jackson.gs, ">
 
 
-        <title>jackson.gs - Authors</title>
+        <title>CS109 lecture three // jackson.gs // </title>
 
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure-min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure.css">
+    <link rel="stylesheet" href="http://jackson.gs/theme/css/pygments.css">
 
     <script src="http://jackson.gs/theme/js/jquery.min.js"></script>
+    <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
     <script>
         $(document).ready(function(){
@@ -1720,7 +1727,78 @@ init_mathjax();
                 </div>
             </div>
         </div>
-    <h1>Authors on jackson.gs</h1>        <li><a href="/author/jacksongs.html">jacksongs</a> (5)</li>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>CS109 lecture three</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/harvard.html">harvard</a>
+                                <a class="post-category" href="/tag/python.html">python</a>
+                                <a class="post-category" href="/tag/cs109.html">cs109</a>
+                        </p>
+                </header>
+            </section>
+            <p><em>Never stop learning is a motto of mine. <a href="/dabbling-in-data-science.html">Here</a> it's data science, and <a href="http://cs109.org/">Harvard's CS109 data science course</a>.</em></p>
+<p>The <a href="http://cm.dce.harvard.edu/2014/01/14328/S01/index_H264SingleHighBandwidth-16x9.shtml">first lab</a> was pretty basic Python, and didn't include much of the array-based computing techniques I'm looking for. </p>
+<p>The readings for week one were also fairly preliminary and were mostly covered in the lectures.</p>
+<p>So onward it is to the second week...</p>
+<h1>Lecture three notes - <a href="http://cm.dce.harvard.edu/2014/01/14328/L03/index_H264SingleHighBandwidth-16x9.shtml">video link</a></h1>
+<p>15:25 - Edward Tufte.</p>
+<p>16:10 - Key principle of Tufte:</p>
+<ul>
+<li>Graphical integrity, spatial distortions, ie bar graphs always start at zero. (reference to How to Lie with Statistics). For line graphs, scale distortions are more acceptable, though reader should be alerted.</li>
+<li>Show context, ie don't be selective with data. But need to be a little bit selective. </li>
+<li>Avoid lie factor, based on size of effect in graphic/size of effect in data.</li>
+<li>Data ink ratio maximised, ie data ink/total ink used in graphic.</li>
+<li>Avoid chartjunk, but matplotlib defaults are awful! Check out IPython notebook in reading.</li>
+</ul>
+<p>32:30 - Chart types. Start by asking:</p>
+<h2>Comparisons?</h2>
+<p>Bar chart, look at Chris' notebook</p>
+<p>For long labels, rotate bars 90 degrees</p>
+<h2>Trends over time?</h2>
+<p>Line charts are reliable</p>
+<p>Important that x-axis is continuous variable</p>
+<p>But! Bars vs lines: lines imply continuous data points.</p>
+<p>Consider aspect ratio. Look at average slope... we are tuned for comparing lines at about 45 degrees.</p>
+<h2>Correlations?</h2>
+<p>Consider light grey border for plotting dots in crowded scatter plots.</p>
+<p>Overplotting problems, try grey borders and muted colours. Or try opacity changes.</p>
+<p>Add a trend line for scatter plots along with confidence intervals.</p>
+<h2>Compositions?</h2>
+<p>Pie chart is used most often here, even though people hate them.</p>
+<p>Some advantages. Ie showing how two categories add up - bar chart is less effective.</p>
+<p>Labelling and order by size is important.</p>
+<p>But consider bar unless there is good reason.</p>
+<p>Donut charts lost the middle piece, the angle, which helps with comparisons.</p>
+<p>What about stacked bar graph? Or 100% bar graph. These are pretty good, arguably better than pie charts.</p>
+<p>But, the problem is when you want to compare segments that aren't lined up on the x-axis.</p>
+<p>Small multiples are also very handy.</p>
+<p>Stacked area chart/100% stacked area chart.</p>
+<p>But - combined line chart is usually better.</p>
+<h2>Distributions?</h2>
+<p>Histogram - play with the bin size.</p>
+<p>Density plots - you could also show the raw data in dots along the axis.</p>
+<p>Heat maps - 2d version of heatmap.</p>
+<p>Box and whisker plots. Red line - median. Box - 25/75 percentile. Whiskers - max/min or 5/95 percentile.</p>
+<h2>Colour</h2>
+<p>Sometimes required - eg maps with quantitative info, if you already have used 2 spatial dimensions use colour for 3rd dimension, categories in line charts or bar charts.</p>
+<p>3 dimensions:</p>
+<ul>
+<li>lightness</li>
+<li>hue</li>
+<li>saturation</li>
+</ul>
+<p>Nominal data or categories suits colours well.</p>
+<p>Ordinal data suits the lightness spectrum.</p>
+<p>For quantitative data, don't use colour map!</p>
+<p>Why? Hard to order. But also chroma channel has lower resolution than lightness channel. And also it is perceptually non-uniform: ie for a uniform change, changes in colour look like there are small jumps.</p>
+<p>Instead, use Brewer scales. See ColorBrewer website. And see Chris' IPython notebook for examples in Python.</p>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+</footer>        </div>
+    </div>
     </div>
     <script>
         var $top = $('.go-top');

@@ -4,134 +4,155 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://jackson.gs/index.html</loc>
-<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<loc>/index.html</loc>
+<lastmod>2014-05-30T08:55:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/archives.html</loc>
-<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2014-05-30T08:55:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tags.html</loc>
-<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2014-05-30T08:55:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/categories.html</loc>
-<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<loc>/categories.html</loc>
+<lastmod>2014-05-30T08:55:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/pages/about-jackson.html</loc>
-<lastmod>2014-05-18T14:17:46-00:00</lastmod>
+<loc>/pages/about-jackson.html</loc>
+<lastmod>2014-05-30T08:55:11-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/dabbling-in-data-science-chapter-i.html</loc>
+<loc>/cs109-lecture-three.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/cs109-lecture-two.html</loc>
+<lastmod>2014-05-25T20:42:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/cs109-lecture-one.html</loc>
+<lastmod>2014-05-24T16:42:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/dabbling-in-data-science.html</loc>
 <lastmod>2014-05-18T13:42:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/a-new-dorne.html</loc>
+<loc>/a-new-dorne.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/category/data-science.html</loc>
-<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<loc>/category/data-science.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/category/web.html</loc>
+<loc>/category/web.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/pelican.html</loc>
+<loc>/tag/pelican.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/github.html</loc>
+<loc>/tag/github.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/harvard.html</loc>
-<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<loc>/tag/harvard.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/python.html</loc>
-<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<loc>/tag/python.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/mezzanine.html</loc>
+<loc>/tag/mezzanine.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/tumblr.html</loc>
+<loc>/tag/tumblr.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/markdown.html</loc>
+<loc>/tag/markdown.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/wordpress.html</loc>
+<loc>/tag/wordpress.html</loc>
 <lastmod>2014-05-05T20:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/tag/cs109.html</loc>
-<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<loc>/tag/cs109.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://jackson.gs/author/jacksongs.html</loc>
-<lastmod>2014-05-18T13:42:00-00:00</lastmod>
+<loc>/author/jacksongs.html</loc>
+<lastmod>2014-05-27T19:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

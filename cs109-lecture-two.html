@@ -1678,13 +1678,20 @@ init_mathjax();
     <meta name="description" content="jackson.gs, ">
 
 
-        <title>jackson.gs - Authors</title>
+        <title>CS109 lecture two // jackson.gs // </title>
 
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure-min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure.css">
+    <link rel="stylesheet" href="http://jackson.gs/theme/css/pygments.css">
 
     <script src="http://jackson.gs/theme/js/jquery.min.js"></script>
+    <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
     <script>
         $(document).ready(function(){
@@ -1720,7 +1727,118 @@ init_mathjax();
                 </div>
             </div>
         </div>
-    <h1>Authors on jackson.gs</h1>        <li><a href="/author/jacksongs.html">jacksongs</a> (5)</li>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>CS109 lecture two</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/harvard.html">harvard</a>
+                                <a class="post-category" href="/tag/python.html">python</a>
+                                <a class="post-category" href="/tag/cs109.html">cs109</a>
+                        </p>
+                </header>
+            </section>
+            <p><em>Never stop learning is a motto of mine. <a href="/dabbling-in-data-science.html">Here</a> it's data science, and <a href="http://cs109.org/">Harvard's CS109 data science course</a>.</em></p>
+<h1>Week 1, lecture 2 notes - <a href="http://cm.dce.harvard.edu/2014/01/14328/L02/index_H264SingleHighBandwidth-16x9.shtml">video link</a></h1>
+<p>Here are some notes from the second lecture video in week one.</p>
+<h2>Outline:</h2>
+<p><em>Process and process books
+</em>Effective visualisations
+*Data sources and cleanup</p>
+<p>11:20 - AGEMC! Ask, get, explore, model, communicate. Plus loops between them.</p>
+<p>12:20 - 'What do analysts do paper?' - This is part of the readings, should be good reading.</p>
+<p>13:50 - Most of time spent? Prepping the data!</p>
+<p>14:50 - Process of data science not yet codified in these companies. Interesting... Repeatability, documentation, process are all critical.</p>
+<p>16:20 - Data cleanup and knowing your data is very important. John Tukey: exploratory data analysis. Look at the data visually before you formulate hypotheses.</p>
+<p>17:35 - Anscombe's Quartet: artificial datasets that have same mean, variance, correlation and linear regression line.</p>
+<p>18:30 - Antibiotic example. Will Burtin, 1951. Data and questions. Talking data types: strings, floats, booleans.</p>
+<p>29:30 - Bacteria comparison example. Key learning: think of more interesting questions, for example consider categories.</p>
+<p>31:15 - "That's funny..." is a cue to pursue more and better informed questions.</p>
+<p>32:00 - Process book! Suits the static blog very well with IPython notebooks.</p>
+<p>35:30 - IPython notebook demonstrations.</p>
+<p>41:40 - Good coding practices: commenting, modularity, array-oriented computing, using assert statements and tests, version control. Array-oriented computing will need some work! (No more for/while loops.) </p>
+<h2>Data types</h2>
+<p>Starts 46:54</p>
+<p>Ben Shneiderman, 1996, different types:</p>
+<ul>
+<li>sequences (1D)</li>
+<li>temporal</li>
+<li>2d (maps)</li>
+<li>3d (shaped)</li>
+<li>nD (relational) - ie table</li>
+<li>trees (hierarchical)</li>
+<li>networks (graphs)</li>
+<li>others?</li>
+</ul>
+<p>Tamara Munzner, 2013, simpler:</p>
+<ul>
+<li>tables</li>
+<li>networks</li>
+<li>text/logs</li>
+</ul>
+<p>Semantics (meaning) vs types (interpretation in terms of scale of measurement)</p>
+<p>1946, Stevens paper:</p>
+<ul>
+<li>nominal (a thing, equal or not equal, but little else)</li>
+<li>ordinal (obey size relationships)</li>
+<li>quantitative (can be interval or ratio)</li>
+</ul>
+<p>Operations therefore:</p>
+<ul>
+<li>nominal: =</li>
+<li>ordinal: =,&gt;</li>
+<li>interval: =,&gt;,+ (distance)</li>
+<li>ratio: =,&gt;,+,x (proportions)</li>
+</ul>
+<p>Row = item
+Column = attribute or feature</p>
+<p>Nominal/Ordinal = Dimensions
+Quantitative = Measures</p>
+<h2>Data dimensions</h2>
+<ul>
+<li>Univariate - lots of chart options</li>
+<li>Bivariate - scatter only really (not 3D! Use size/colour instead)</li>
+<li>Multivariate - tables of many columns (consider small multiples, but this is a big challenge in data visualisation)</li>
+</ul>
+<p>So focus on data reduction...</p>
+<p><em>Filtering - select of interest
+</em>Aggregation - ave, min, max</p>
+<h2>Mapping data to images</h2>
+<p>Jacques Bertin, French Cartographer, 'Semiology of Graphics' 1967 provided a basic vocabulary of marks:</p>
+<ul>
+<li>Points</li>
+<li>Lines</li>
+<li>Zones</li>
+</ul>
+<p>Along with channels:</p>
+<ul>
+<li>Position</li>
+<li>Size</li>
+<li>Greyscale</li>
+<li>Texture</li>
+<li>Colour</li>
+<li>Orientation</li>
+<li>Shape</li>
+</ul>
+<p>William Playfair came up with most types of chart in the late 18th century.</p>
+<p>So what channels/marks are most effective for what data types?</p>
+<p>Colour hue is not perceived as ordered, though brightness and saturation do.</p>
+<p>Bertin set out how well each channel works with data.</p>
+<p>Cleveland/McGill, 1984 and Mackinlay, 1986 carried out studies to check how well people could judge quantities.</p>
+<p>Scale of efficiency:</p>
+<ul>
+<li>position</li>
+<li>length</li>
+<li>slope or angle</li>
+<li>area</li>
+<li>intensity</li>
+<li>colour or shape (but good for nominal types/categories)</li>
+</ul>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+</footer>        </div>
+    </div>
     </div>
     <script>
         var $top = $('.go-top');
