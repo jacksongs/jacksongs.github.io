@@ -1678,13 +1678,20 @@ init_mathjax();
     <meta name="description" content="jackson.gs, ">
 
 
-        <title>python tag // jackson.gs // </title>
+        <title>CS109 lecture four // jackson.gs // </title>
 
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure-min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure.css">
+    <link rel="stylesheet" href="http://jackson.gs/theme/css/pygments.css">
 
     <script src="http://jackson.gs/theme/js/jquery.min.js"></script>
+    <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
     <script>
         $(document).ready(function(){
@@ -1722,67 +1729,58 @@ init_mathjax();
         </div>
     <div class="pure-u">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts tagged 'python'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-four.html">CS109 lecture four</a></h3>
-                            <p class="post-meta"><p>CS109 rolls into data munging and scraping.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sat 31 May 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-three.html">CS109 lecture three</a></h3>
-                            <p class="post-meta"><p>Moving into week two of the CS109 data science course at Harvard.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Tue 27 May 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-two.html">CS109 lecture two</a></h3>
-                            <p class="post-meta"><p>More riveting notes and reflections from the second lecture of CS109.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sun 25 May 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-one.html">CS109 lecture one</a></h3>
-                            <p class="post-meta"><p>Notes and reflections from the first lecture in the CS109 Harvard data science course.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sat 24 May 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/dabbling-in-data-science.html">Dabbling in data science</a></h3>
-                            <p class="post-meta"><p>My motivations for seeking to skill up in data science.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sun 18 May 2014
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
-    </div>
-</div><footer class="footer">
-</footer>            </div>
-        </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1>CS109 lecture four</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/harvard.html">harvard</a>
+                                <a class="post-category" href="/tag/python.html">python</a>
+                                <a class="post-category" href="/tag/cs109.html">cs109</a>
+                        </p>
+                </header>
+            </section>
+            <p><em>Never stop learning is a motto of mine. <a href="/dabbling-in-data-science.html">Here</a> it's data science, and <a href="http://cs109.org/">Harvard's CS109 data science course</a>.</em></p>
+<p><strong>Summary:</strong> This lecture was mostly basic html scraping, but then it got really awesome really quickly when Chris Beaumont started looking at data exploration.</p>
+<p>The key takeaways were some of the data exploration methods, especially the small multiples code, which I will have to borrow (thanks Chris) from <a href="http://www.google.com/url?q=http%3A%2F%2Fnbviewer.ipython.org%2Furls%2Fraw.github.com%2Fcs109%2Fcontent%2Fmaster%2Flec_04_wrangling.ipynb&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFBcyzq-zO_dFqZPeWkoq1U-bNsMg">here</a>.</p>
+<p><img alt="Awesome small multiples from Chris Beaumont" src="https://www.evernote.com/shard/s162/sh/a96b4116-ddca-418f-9458-f110ad2d1e5c/82c6f3f9f8640d759ef88dd54d3fead2/res/153c4182-4ec9-48c0-be27-97a7b1e9de54/skitch.png?resizeSmall&amp;width=832" /></p>
+<h1>Lecture four notes - <a href="http://cm.dce.harvard.edu/2014/01/14328/L04/index_H264SingleHighBandwidth-16x9.shtml">video link</a></h1>
+<h2>Getting data from the web</h2>
+<p>Check out the resources page on the course site for lots of data sources.</p>
+<p>Talking about web basics...</p>
+<h2>Scraping demo</h2>
+<p>Very basic scraping example...</p>
+<h2>Wrangling demo</h2>
+<p>Starts ~55:00</p>
+<p>Data cleaning patterns</p>
+<p>1) Build a dataframe</p>
+<p>2) Clean:</p>
+<ul>
+<li>Row - Object... each row describes a single object</li>
+<li>Column - Describe... each column describes a property of that object</li>
+<li>Column - Numeric... columns are numeric wherever possible</li>
+<li>Column - Atomic... columns contain atomic properties that cannot be further decomposed</li>
+</ul>
+<p>3) Explore global properties:</p>
+<ul>
+<li>histograms</li>
+<li>scatter plots</li>
+<li>aggregation</li>
+</ul>
+<p>4) Group properties:</p>
+<ul>
+<li>use groupby and small multiples to explore subsets.</li>
+</ul>
+<h2>Computing indicator variables</h2>
+<p>These are useful when you want to split a field with a list of indicators out across different columns each with a boolean value.</p>
+<p>~1:02:30</p>
+<p>When collecting the unique values, use set()... this doesn't add a value twice.</p>
+<p>Then create another loop... code at 1:05:00</p>
+<h2>Exploratory data analysis</h2>
+<p>Note questions and findings as you go.</p>
+<p>Awesome small multiples code in the demo notebook.</p>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+</footer>        </div>
     </div>
     </div>
     <script>
