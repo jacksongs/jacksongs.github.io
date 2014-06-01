@@ -1822,7 +1822,7 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[10]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1859,41 +1859,24 @@ In&nbsp;[9]:
 
 <span class="c"># And here are some extra functions provided by Chris that will be used in functions below</span>
 
+<span class="c"># This function removes non-letter characters from a word</span>
 <span class="k">def</span> <span class="nf">_strip</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;This function removes non-letter characters from a word</span>
-<span class="sd">    </span>
-<span class="sd">    for example _strip(&#39;Hi there!&#39;) == &#39;Hi there&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r&#39;[\W_]+&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 
+<span class="c">#Given an XML document like the link above, returns a python dictionary that maps a graph title to a graph color.</span>
 <span class="k">def</span> <span class="nf">plot_colors</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Given an XML document like the link above, returns a python dictionary</span>
-<span class="sd">    that maps a graph title to a graph color.</span>
-<span class="sd">    </span>
-<span class="sd">    Both the title and color are parsed from attributes of the &lt;graph&gt; tag:</span>
-<span class="sd">    &lt;graph title=&quot;the title&quot;, color=&quot;#ff0000&quot;&gt; -&gt; {&#39;the title&#39;: &#39;#ff0000&#39;}</span>
-<span class="sd">    </span>
-<span class="sd">    These colors are in &quot;hex string&quot; format. This page explains them:</span>
-<span class="sd">    http://coding.smashingmagazine.com/2012/10/04/the-code-side-of-color/</span>
-<span class="sd">    </span>
-<span class="sd">    Example</span>
-<span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; plot_colors(get_poll_xml(1044))</span>
-<span class="sd">    {u&#39;Approve&#39;: u&#39;#000000&#39;, u&#39;Disapprove&#39;: u&#39;#FF0000&#39;}</span>
-<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">dom</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">graph</span> <span class="ow">in</span> <span class="n">dom</span><span class="o">.</span><span class="n">by_tag</span><span class="p">(</span><span class="s">&#39;graph&#39;</span><span class="p">):</span>
         <span class="n">title</span> <span class="o">=</span> <span class="n">_strip</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">attributes</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">])</span>
         <span class="n">result</span><span class="p">[</span><span class="n">title</span><span class="p">]</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">attributes</span><span class="p">[</span><span class="s">&#39;color&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">result</span>
+
 <span class="n">poll_plot</span><span class="p">(</span><span class="mi">1044</span><span class="p">)</span>
+
 <span class="c"># I like to use seaborn - see http://stanford.edu/~mwaskom/software/seaborn/</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">&#39;ticks&#39;</span><span class="p">)</span>
-
-
 
 <span class="c">#So, put these together and you have Obama&#39;s approval rating over time</span>
 
@@ -1911,12 +1894,12 @@ In&nbsp;[9]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[9]:</div>
+    Out[10]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-&lt;matplotlib.text.Text at 0x10f57b190&gt;
+&lt;matplotlib.text.Text at 0x110076a10&gt;
 </pre>
 </div>
 
