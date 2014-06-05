@@ -1678,13 +1678,20 @@ init_mathjax();
     <meta name="description" content="jackson.gs, ">
 
 
-        <title>python tag // jackson.gs // </title>
+        <title>A humble scraper // jackson.gs // </title>
 
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure-min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://jackson.gs/theme/css/pure.css">
+    <link rel="stylesheet" href="http://jackson.gs/theme/css/pygments.css">
 
     <script src="http://jackson.gs/theme/js/jquery.min.js"></script>
+    <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     <script src="http://jackson.gs/theme/js/jquery.fitvids.js"></script>
     <script>
         $(document).ready(function(){
@@ -1722,68 +1729,367 @@ init_mathjax();
         </div>
     <div class="pure-u">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts tagged 'python'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/sa-government-contract-analysis.html">SA government contract analysis</a></h3>
-                            <p class="post-meta"><p>A few charts that help make sense of the SA government's procurement data.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/work.html">work</a> &middot; Thu 05 June 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/a-humble-scraper.html">A humble scraper</a></h3>
-                            <p class="post-meta"><p>Here's a real-life python scraper to collect South Australian government contract data.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/work.html">work</a> &middot; Thu 05 June 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-homework-one.html">CS109 homework one</a></h3>
-                            <p class="post-meta"><p>Harvard's data science course offers great IPYthon notebook problems, like this one about political polls.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sun 01 June 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-four.html">CS109 lecture four</a></h3>
-                            <p class="post-meta"><p>CS109 rolls into data munging and scraping.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Sat 31 May 2014
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/cs109-lecture-three.html">CS109 lecture three</a></h3>
-                            <p class="post-meta"><p>Moving into week two of the CS109 data science course at Harvard.</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/data-science.html">data science</a> &middot; Tue 27 May 2014
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 2</span>
-        <div class="pagination-right">
-                <a href="/tag/python2.html">Older posts&nbsp;&rarr;</a>
-        </div>
-    </div>
-</div><footer class="footer">
-</footer>            </div>
-        </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1>A humble scraper</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/scraping.html">scraping</a>
+                                <a class="post-category" href="/tag/python.html">python</a>
+                        </p>
+                </header>
+            </section>
+            <p>Here's something I put together today at work. It grabs all the contracts listed on the <a href="http://www.tenders.sa.gov.au">www.tenders.sa.gov.au</a> website.</p>
+<p>It took about 30 minutes to write. I hit some trouble with some unanticipated blank spots. Ultimately it ran through in a couple of hours, as you can see from the times listed.</p>
+<p>Drop me a line on Twitter if you have any questions: <a href="http://www.twitter.com/jacksongs">@jacksongs</a>.</p>
+<p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[68]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># First, some imports.</span>
+
+<span class="kn">from</span> <span class="nn">pattern.web</span> <span class="kn">import</span> <span class="n">URL</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="n">plaintext</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Next, some preliminary steps.</span>
+
+<span class="c"># This is the base URL. We will be appending a number at the end of this.</span>
+<span class="n">base</span> <span class="o">=</span> <span class="s">&#39;https://www.tenders.sa.gov.au/tenders/contract/view.do?id=&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[107]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># This is the scraper</span>
+
+<span class="c"># This reads the backup data and puts its back into the &#39;row&#39; dictionary</span>
+<span class="c"># This is the last number backed up.</span>
+<span class="c">### Change this if you are running from a backup file.</span>
+<span class="n">rerun</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">if</span> <span class="n">rerun</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="c"># This is for the first time run.</span>
+    <span class="c"># We are going to be creating one big dictionary that will then be turned into a dataframe.</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># This is for the backup run. </span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1500</span>
+    <span class="n">backup</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;data</span><span class="si">%s</span><span class="s">.txt&#39;</span><span class="o">%</span><span class="k">n</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">backup</span><span class="p">)</span>
+
+<span class="c"># This will help tell us when to stop the scraper later.</span>
+<span class="n">stopcount</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># And now, the scraper!</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="c"># This is the trigger to stop the scraper.</span>
+    <span class="k">if</span> <span class="n">stopcount</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="c"># There is a big chunk of contracts missing around the 1600s.</span>
+        <span class="c"># We keep the scraper running during this range, just in case they come back in future.</span>
+        <span class="k">if</span> <span class="mi">1600</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1800</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&#39;Ended at:&#39;</span><span class="p">,</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span><span class="s">&#39;, at id:&#39;</span><span class="p">,</span><span class="n">n</span>
+            <span class="k">break</span>
+    
+    <span class="c"># This part backs up the data and gives us a status update every time the scraper gets to its 500th page.</span>
+    <span class="c"># The backup system is simply a text file with one big json object.</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">n</span><span class="p">,</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;data</span><span class="si">%s</span><span class="s">.txt&#39;</span><span class="o">%</span><span class="k">str</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
+        <span class="n">outfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    <span class="c"># Here we create a new key in our dictionary for the current contract.</span>
+    <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="c"># This downloads the page and passes it to the pattern module.</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="n">base</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cached</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">throttle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="nb">unicode</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">element</span> <span class="o">=</span> <span class="n">Element</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    
+    <span class="c"># This is the auto stopper. If we get an Error 20 consecutive times, we&#39;ll end the scraper.</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">by_tag</span><span class="p">(</span><span class="s">&#39;h2&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">==</span> <span class="s">&#39;Error Type:&#39;</span><span class="p">:</span>
+            <span class="n">stopcount</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">stopcount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> 
+    
+    <span class="c"># Here we grab the data.</span>
+    <span class="c"># First, the name. Note I have wrapped everything in try/except statements in case the scraper hits a page with a different format.</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s">&#39;Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">by_tag</span><span class="p">(</span><span class="s">&#39;h2&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s">&#39;Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">e</span> <span class="c"># Here I record name errors in the Name column.</span>
+        
+    <span class="c"># Second, each left hand value in the table - the category - and its corresponding right-hand value.</span>
+    <span class="c"># This required a bit of relative movement. This is perhaps this scraper&#39;s biggest weakness.</span>
+    <span class="c"># If the table format is different, the data won&#39;t be collected.</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">element</span><span class="o">.</span><span class="n">by_class</span><span class="p">(</span><span class="s">&#39;LIST_TITLE&#39;</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="nb">str</span><span class="p">(</span><span class="n">plaintext</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">)))</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">by_tag</span><span class="p">(</span><span class="s">&#39;td&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">content</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s">&#39;Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">e</span> <span class="c"># Here I am recording errors in the Error column.</span>
+    
+    <span class="c"># And of course, now increase n by one and start again...</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="c"># And now we put the whole freaking row in the dataframe!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s">&#39;index&#39;</span><span class="p">)</span> 
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+1500 2014-06-04 15:11:06.162936
+2000 2014-06-04 15:13:49.933822
+2500 2014-06-04 15:17:39.985170
+3000 2014-06-04 15:21:40.648597
+3500 2014-06-04 15:25:41.657871
+4000 2014-06-04 15:30:02.271562
+4500 2014-06-04 15:34:14.597984
+5000 2014-06-04 15:38:29.060933
+5500 2014-06-04 15:42:55.413274
+6000 2014-06-04 15:47:02.916969
+6500 2014-06-04 15:51:17.116702
+7000 2014-06-04 15:55:36.960486
+7500 2014-06-04 16:00:04.841171
+8000 2014-06-04 16:05:07.123241
+8500 2014-06-04 16:09:59.847718
+9000 2014-06-04 16:17:06.561110
+9500 2014-06-04 16:22:24.398357
+Ended at: 2014-06-04 16:24:15.793143 , at id: 9723
+
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[107]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Freedom of Information Officer</th>
+      <th>Name of Public Authority</th>
+      <th>Total inc GST</th>
+      <th>Reference #</th>
+      <th>Phone</th>
+      <th>Good or Services Acquired</th>
+      <th>E-Mail</th>
+      <th>Procurement Process</th>
+      <th>Agency Unit</th>
+      <th>1)</th>
+      <th>Completion Date</th>
+      <th>Starting Date</th>
+      <th>Execution Date</th>
+      <th>Associated with Tender</th>
+      <th>2)</th>
+      <th>Contract Documents</th>
+      <th>8)</th>
+      <th>17)</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1500</th>
+      <td> Funding Agreement between Minister for Employm...</td>
+      <td> Funding Agreement between Minister for Employm...</td>
+      <td>       Jeff Harris</td>
+      <td>    Department for Education and Child Development</td>
+      <td>  $8,000,000</td>
+      <td>   DFEEST004</td>
+      <td>   OFFICE: (08) 8226 3276\r\n</td>
+      <td> \n&lt;p&gt;The provision of high quality Vocational ...</td>
+      <td> \n&lt;a href="mailto:harris.jeff@saugov.sa.gov.au...</td>
+      <td> Waive of competitive process</td>
+      <td> Department of Further Education, Employment, S...</td>
+      <td> Tauondi Incorporated&lt;br /&gt;\r\n    PO Box 409, ...</td>
+      <td> 31 Dec, 2008</td>
+      <td>  1 Jan, 2005</td>
+      <td> 18 May, 2005</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td> &lt;a href="/tenders/contract/download.do?id=1500...</td>
+      <td> None</td>
+      <td> None</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1501</th>
+      <td> Adelaide Light Rail Project Glenelg Tramway In...</td>
+      <td> Adelaide Light Rail Project Glenelg Tramway In...</td>
+      <td>      Ian Maxfield</td>
+      <td> Department of Planning, Transport and Infrastr...</td>
+      <td> $16,383,780</td>
+      <td>       10/05</td>
+      <td>   OFFICE: (08) 8218 2276\r\n</td>
+      <td>  Adelaide Light Rail Project Glenelg Tramway I...</td>
+      <td> \n&lt;a href="mailto:maxfield.ian@transadelaide.s...</td>
+      <td>             Selective tender</td>
+      <td>                                 Rail Commissioner</td>
+      <td>                                              None</td>
+      <td> 30 Apr, 2006</td>
+      <td> 12 Apr, 2005</td>
+      <td> 12 Apr, 2005</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td> None</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1502</th>
+      <td> Construction of five (5) one bedroom houses at...</td>
+      <td> Construction of five (5) one bedroom houses at...</td>
+      <td>     Roxanne Clark</td>
+      <td>   Department for Communities and Social Inclusion</td>
+      <td>    $994,675</td>
+      <td>      AHA001</td>
+      <td>   OFFICE: (08) 8235 4395\r\n</td>
+      <td>  Construction of five (5) one bedroom houses a...</td>
+      <td> \n&lt;a href="mailto:roxanne.clark@dfc.sa.gov.au"...</td>
+      <td>             Selective tender</td>
+      <td>                     Office for Aboriginal Housing</td>
+      <td> Pimba Building Contractors&lt;br /&gt;\r\n    20 Dav...</td>
+      <td> 10 Mar, 2006</td>
+      <td> 28 Jul, 2005</td>
+      <td> 28 Jul, 2005</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td> None</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1503</th>
+      <td> Construction of sections of the Central Catchm...</td>
+      <td> Construction of sections of the Central Catchm...</td>
+      <td>   Elizabeth Young</td>
+      <td>                              Department for Water</td>
+      <td>  $2,184,550</td>
+      <td> DWLBC011199</td>
+      <td>    OFFICE: (08) 84637905\r\n</td>
+      <td> \n&lt;p&gt;Upper South East Dryland Salinity and Flo...</td>
+      <td> \n&lt;a href="mailto:young.elizabeth@saugov.sa.go...</td>
+      <td>                Public tender</td>
+      <td>                                              None</td>
+      <td> Leed Engineering and Construction Pty Ltd&lt;br /...</td>
+      <td> 30 Jun, 2005</td>
+      <td>  4 Apr, 2005</td>
+      <td>  4 Apr, 2005</td>
+      <td> &lt;a href="/tenders/tender/display/tender-detail...</td>
+      <td> None</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td> None</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1504</th>
+      <td> River Murray Wetlands Baseline Survey (Ref No:...</td>
+      <td> River Murray Wetlands Baseline Survey (Ref No:63)</td>
+      <td> Stephanie Weinert</td>
+      <td>     River Murray Catchment Water Management Board</td>
+      <td>  $1,073,234</td>
+      <td>   RMCWMB002</td>
+      <td>   OFFICE: (08) 8582 4477\r\n</td>
+      <td> \n&lt;p class="MsoNormal" style="MARGIN: 10pt 0cm...</td>
+      <td> \n&lt;a href="mailto:sweinert@saugov.sa.gov.au"&gt;s...</td>
+      <td>                Public tender</td>
+      <td>                                              None</td>
+      <td> Sinclair Knight Merz&lt;br /&gt;\r\n    PO BOX 2500,...</td>
+      <td> 24 Dec, 2004</td>
+      <td> 24 Sep, 2003</td>
+      <td> 24 Sep, 2003</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td>                                              None</td>
+      <td> None</td>
+      <td> None</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 59 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[110]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># And now we export the data as a csv...</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">&#39;data.csv&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></p>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+</footer>        </div>
     </div>
     </div>
     <script>
