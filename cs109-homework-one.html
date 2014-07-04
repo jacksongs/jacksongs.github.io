@@ -1742,13 +1742,12 @@ init_mathjax();
             <p><em>Never stop learning is a motto of mine. <a href="/dabbling-in-data-science.html">Here</a> it's data science, and <a href="http://cs109.org/">Harvard's CS109 data science course</a>.</em></p>
 <p><strong>Summary:</strong> This notebook is a tasty teaser of what's to come.</p>
 <p>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[1]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># The CS109 data science course at Harvard has terrific homework assignments that quickly escalate from basic-level coding into serious data analysis. </span>
 
 <span class="c"># Here I walk through the first one.</span>
@@ -1767,16 +1766,14 @@ In&nbsp;[1]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[1]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># We will be grabbing data from the American RealClearPolitics website.</span>
 
 <span class="c"># The data are stored as XML pages, with URLs like:</span>
@@ -1791,16 +1788,14 @@ In&nbsp;[1]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[76]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Given a poll_id, this function returns the XML data as a text string. This is the primary &#39;raw&#39; scraper.</span>
 <span class="k">def</span> <span class="nf">get_poll_xml</span><span class="p">(</span><span class="n">poll_id</span><span class="p">):</span>
     <span class="n">xml</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;http://charts.realclearpolitics.com/charts/</span><span class="si">%s</span><span class="s">.xml&#39;</span><span class="o">%</span><span class="k">poll_id</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
@@ -1875,16 +1870,15 @@ In&nbsp;[76]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgIAAAFzCAYAAABM02E1AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XdcE/f/B/BXQKYbFeugijhwtHVvrRsVq7jRiv1pa6tV
 66i26LdIXVRr1VpXrXWidaPWrTjqxlH3gIoLFRUHS0Ygef/+OO6SyyBBCWG8n4/HPUhufu5ILu/7
@@ -2434,23 +2428,21 @@ WLFiBUaNGoUhQ4YYHDyluLgYTz/9NNasWQMAyM/P10sWiMg+sWqAiPSoVCqsXLkS7dq1Q2pqKvr1
 4mK0bt0aM2bMwI0bN/DWW2/Bw8MDjz76KGrXrg0/Pz9MnjwZ0dHRuHLlCrZu3YqkpCR89NFHKC4u
 Ru3atbF06VJUr17dxu+MiExhIkBEROTCWDVARETkwpgIEBERuTAmAkRERC6MiQAREZELYyJARETk
 wpgIEBERuTAmAkRERC6MiQAREZEL+38aUK/kX4oOKAAAAABJRU5ErkJggg==
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[137]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># The next step is to work out how well polls predict the election result.</span>
 
 <span class="c"># Let&#39;s get some more data.</span>
@@ -2474,17 +2466,16 @@ In&nbsp;[137]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[137]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
 
-<div class="output_text output_subarea output_pyout">
 <pre>
 [&apos;http://www.realclearpolitics.com/epolls/2010/governor/ri/rhode_island_governor_chafee_vs_caprio_vs_robitaille-1232.html&apos;,
  &apos;http://www.realclearpolitics.com/epolls/2010/governor/az/arizona_governor_brewer_vs_goddard-1409.html&apos;,
@@ -2492,21 +2483,20 @@ In&nbsp;[137]:
  &apos;http://www.realclearpolitics.com/epolls/2010/governor/ar/arkansas_governor_keet_vs_beebe-1568.html&apos;,
  &apos;http://www.realclearpolitics.com/epolls/2010/governor/ny/new_york_governor_paladino_vs_cuomo-1423.html&apos;]
 </pre>
-</div>
-
-</div>
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[123]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Now, for each governor race, we want to pull out the actual results in an easy-to-use format.</span>
 
 <span class="c"># This function scrapes the key fields in the table on each results page.</span>
@@ -2532,37 +2522,35 @@ In&nbsp;[123]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[123]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
 
-<div class="output_text output_subarea output_pyout">
 <pre>
 {u&apos;Hickenlooper&apos;: 0.5794285714285715,
  u&apos;Maes&apos;: 0.12685714285714286,
  u&apos;Tancredo&apos;: 0.42057142857142854}
 </pre>
-</div>
-
-</div>
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[149]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Some more extra functions from Chris...</span>
 
 <span class="c"># This function grabs the ID of the governor race from the html link of the page.</span>
@@ -2587,16 +2575,14 @@ In&nbsp;[149]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[150]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Now we can build a whole collection of mapped charts</span>
 <span class="c"># A few of these don&#39;t display correctly though as the xml links are empty.</span>
 <span class="c"># See, for example, http://charts.realclearpolitics.com/charts/1163.xml for the Hawaii race.</span>
@@ -2612,16 +2598,15 @@ In&nbsp;[150]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAg8AAAFqCAYAAACd9LnWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XdYU2fDBvA7IWxEQEVFhkrde1D3AqxUbd0bnLXWqrVa
 rbhA3LsDabXt21pHXXW0+rZaTa04UGzdKFirKCAiiuyRQJ7vDz7ziooxluQEuH/X5VVIzjm5k1Ph
@@ -2921,16 +2906,15 @@ YsFoNGIwGPB4PN6ejQi63S6bzQb4Xh/8Z2BI+hyOLSS9eb1erFYrOp0OZVnS6/Xo9/s0Gg0OhwMR
 AUClUiEiaLfbHI9HLpcLAOv1+uefCEmfx62akt6OakYEeZ4zm8243+9Mp1Oq1SrNZpMsy6jX60wm
 E8bjMUVRsNvt2O/3LJdLIoIsy5jP59Rqtf/8ZpL+BeNBkiQlcWwhSZKSGA+SJCmJ8SBJkpIYD5Ik
 KYnxIEmSkhgPkiQpifEgSZKSfAHQVJIATsjb4QAAAABJRU5ErkJggg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVOX+B/DPYWbYdxVcMFC0LE3N9GZprtQlUzN3FFxL
 rMQKyzUXjNQ08xZkat30hl7NUvvVvWUWWXrdsMxcEs1dElEEgYGB2c7vD5xjhDjMwMw5DJ/363Vf
@@ -3227,16 +3211,15 @@ kCFDcOPGjUrPNZlM6NSpE95//30AqLTdORHVHRxKIKJKzGYzUlJS0LFjR1y8eBFPPPEEnn76aTRo
 V65cwbRp0+Du7o5GjRqhSZMmCAwMxIsvvoipU6fi3Llz2LJlC/bs2YN33nkHJpMJTZo0wbJlyyps
 Q0xEdQODAREREUk4lEBEREQSBgMiIiKSMBgQERGRhMGAiIiIJAwGREREJGEwICIiIgmDAREREUn+
 H+ddNbUTjzjSAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAAFqCAYAAAB/KKKvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlYVPX+B/D3mRn2RTZBkUVAJXfTTE0tt9I0KxUXEiy1
 tFvZLfesXMrUa9e6pf1ab5pLes1rtz0r1DQ3THNDEBFkFxBkh1nP7w9kkgYcljlzBni/nsfncc6c
@@ -3611,16 +3594,15 @@ R494F4MgCIo/c7Tb7fTt25fXXnuNv/76i8WLF6PVaunYsSMBAQH4+PiwcOFCUlNTKS8vJz8/n6Ki
 It5//33sdjsBAQFkZmbe16uNBUH4dxIDBEEQBEEQFMQtBkEQBEEQFMQAQRAEQRAEBTFAEARBEARB
 QQwQBEEQBEFQEAMEQRAEQRAUxABBEARBEAQFMUAQBEEQBEHhfwDja+56oazw3AAAAABJRU5ErkJg
 gg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFqCAYAAAAOZrPAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlYVGX/BvD7DPsOLqiEgRKupLngvotGZuWOJGhipW+v
 2C9NxUwRMzXNNtDc3rJwN5eyt8VXTCFRwH0FE0FFERdkRxhmzu8PcxJhGMAZDme4P9fFdTlnzvJ9
@@ -3905,16 +3887,15 @@ iMpQq9UIDw/HCy+8gGvXruGll17C8OHDUb9+fSQkJEClUgEATExMoFKp0L59e5w6dQqpqakAgFWr
 VpW6ux0RGRavzU5EZb6aplKp0LZtW3zwwQe4desWZsyYAXNzczRs2BBNmjSBo6Mj3n33XUybNg0p
 KSnYuXMnDh8+jC+//BIqlQpNmjTB8uXLS92WlIgMh2FOREQkcxxmJyIikjmGORERkcwxzImIiGSO
 YU5ERCRzDHMiIiKZY5gTERHJHMOciIhI5v4fdEEOzEQwz5gAAAAASUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlYVGX/BvD7zADDMgygKIjghiiaqZEo5pIKGZXmnppi
 pqW+JVZYibnQopma9XsTK2157VXTrLQ3y9RCExUFyn0BTUVAEVAEZgBhhjm/P4iTKOMMOAvL/bku
@@ -4247,16 +4228,15 @@ RGdnJ69fvwagoqJiygqNQgjXIWslCCGcfq6oKApGo5HCwkI+fvzI0aNHcXd3x9/fn6CgILy9vcnJ
 ySE7O5u+vj7q6+ux2WxcuXIFRVEICgrCYrFMWWZYCOEapDAQQgghhEYuJQghhBBCI4WBEEIIITRS
 GAghhBBCI4WBEEIIITRSGAghhBBCI4WBEEIIITRSGAghhBBC8y8hx+QdzSSR1gAAAABJRU5ErkJg
 gg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAg8AAAFqCAYAAACd9LnWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl0FGXC9uG7swdCCGsAE9kGjOKCjCwKyKryugECApKI
 GAFRYRRBw44sQVlkxkQUXIcQBqIGfHFUZOICigIOskrYAwRCkECALGTp1PcHH/0aSUw66e7qwO86
@@ -4504,16 +4484,15 @@ rVopJCRE8fHxOnTokI4cOVLs7nvSpTnx09LSFBERIenSXPuMOgBXL8oDgBLl5+fr8OHDOnr0qP7+
 WtWqVStNnDhRJ0+e1IsvvigfHx/Vq1dPDRs2VFBQkP72t79pzJgxOnz4sD755BP98MMP+sc//iGr
 1aqGDRtq3rx5qlmzpsmfDIAzUB4AAIBdOG0BAADsQnkAAAB2oTwAAAC7UB4AAIBdKA8AAMAulAcA
 AGAXygMAALDL/wPaFMfJLXhXlgAAAABJRU5ErkJggg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFqCAYAAAAOZrPAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl4FFX2N/BvVe+dzr5CEggJu7ihoICgCCizoIIwDgI6
 yqL+NDgwboiDG4IjMrwKqIgjKqCODrigI4owgguCCyD7HiAQsi+d3rur3j+qq5KQdLo76apecj7P
@@ -4974,16 +4953,15 @@ iUg+7GYnolrMZjOSkpIwYMAA5OXl4emnn8bYsWPRrl07nDx5EiaTCQCkmfL69++PjIwMXLp0CQCQ
 nJxsNTMXEcmLz2Ynolo/TTOZTOjTpw/mz5+Pa9euYfbs2dBoNOjQoQP8/Pzg4+ODmTNnYsaMGcjJ
 ycHOnTtx9OhRvPvuuzCZTPDz88OyZcvQpk2bJo6MqGVgMiciIlI4drMTEREpHJM5ERGRwjGZExER
 KRyTORERkcIxmRMRESkckzkREZHCMZkTEREp3P8DWc1sAcd2qnMAAAAASUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlYVGX/BvD7DNswwIiooIgCIq7kkkuaSymkZKlpapKQ
 aebyKlqWSlqihmlq9RbozxbLNzHLfNWy1Eo0UURxyQ1EXEBFQXBjX2fO7w9eJklgWGbmDDP357q4
@@ -5347,16 +5325,15 @@ Q4Zw5MgRzp8/D8DatWvtZpEUQnQcMleCEMLh3xWtViv+/v4sXbqUP/74g4ULF+Li4kLPnj3x8vLC
 3d2dBQsWEBsbS1lZGdnZ2RQWFvLZZ59htVrx8vIiKSnJblpjIUTHIImBEEIIITRyK0EIIYQQGkkM
 hBBCCKGRxEAIIYQQGkkMhBBCCKGRxEAIIYQQGkkMhBBCCKGRxEAIIYQQmv8BZz4B0kyLISAAAAAA
 SUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlYVPX+B/D3mRn2HRUEIdyzLDPTXMtcs1LLRIUANcnU
 e8VKTdEKl0xNMm6hXdNKfyGlllrZYi5dlzRRM80Nc1cEAUGWQYRZzu8P5OjIMgPMGWac9+t5eh6Y
@@ -5653,16 +5630,15 @@ TET79u1x6dIlPPPMMxgyZAgaNGiAAwcOQKfTAQCUSiV0Oh0eeeQRHD58GBcuXAAAfPLJJwZ3YiQi
 28F7JRBRheWKOp0Obdu2xcyZM3H16lVMmTIFjo6OaNSoEQICAuDt7Y3XXnsNkyZNwvnz57F+/Xrs
 2bMHH330EXQ6HQICAhAfH29wW2Eisg0MBkRERCThUAIRERFJGAyIiIhIwmBAREREEgYDIiIikjAY
 EBERkYTBgIiIiCQMBkRERCT5fwW3xDOjXJs2AAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlcVOX+B/DPGZZhHRAXEEFA1HDNa5lZprlk3srccEHE
 jdQWtUJvLpWmKZZL/m5gmVZ6Q9Qs8ZbtZdelTDTNXVBRUBYRQWQbmIE5vz+IkyQ4IHPmzAyf9+vV
@@ -5984,27 +5960,26 @@ SP39/fJ6vTo9PZVt25Kkmpoa2batjo4OnZ2d6ebmRpIUj8fLJioCqB7MSgBQcVzRtm0ZhqFIJKLH
 x0dNT0+rrq5Ozc3N8vl8amxs1NTUlMLhsLLZrPb29nR0dKSVlRXZti2fz6dYLFY2MhhAdSAYAAAA
 B58SAACAg2AAAAAcBAMAAOAgGAAAAAfBAAAAOAgGAADAQTAAAACOX6gykYYOaoDWAAAAAElFTkSu
 QmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_text output_subarea ">
 <pre>
 &lt;matplotlib.figure.Figure at 0x1105ee250&gt;
 </pre>
-</div>
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgUAAAFqCAYAAACK1ikfAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVPX+x/HXsMsq4i4oiGuadl3SUiu3MrOyNBUVyyz1
 dtVbZmlaLuVSqW1YanW7/kLLstS63bKFFs29xV0xFVQUUUFWkWXm/P4A5kaAuMwC+H4+Hj4ezsyZ
@@ -6298,16 +6273,15 @@ zhAdjGMAAAC1SURBVDu57777CAoKYvv27ZjNZgBcXV0xm820bduWHTt2EB8fD8Bbb71VbGdJEakc
 tPeBiJSYkmg2m2nVqhVTp07l1KlTPPnkk3h4eFCrVi3q1atH9erV+ec//8mECROIi4vj008/ZePG
 jbz++uuYzWbq1avH/Pnzi21nLCIVn0KBiIiIALp9ICIiIoUUCkRERARQKBAREZFCCgUiIiICKBSI
 iIhIIYUCERERARQKREREpND/A6RjAfHZDAodAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xlc1XW+x/HXORz2HVQQQVDcM7XM0sbKrXIsyxozTams
 RpuKZrIsy8o0S7NpmtJp2m7jpI2lZdtU00KuaWrmrrjihggqsu+cc/9AjpLiAfV3Fng/Hw/v5fzO
@@ -6685,16 +6659,15 @@ XgRg1apVRk9IlCTp+SGflSBJUq2vK+p0Otzd3YmLi+OPP/4gJiYGCwsLWrdujYODA7a2tkyfPp1p
 06Zx4cIFduzYQW5uLitWrECn0+Hg4EBSUpLRI4ElSXo+yIGBJEmSJEkK+VGCJEmSJEkKOTCQJEmS
 JEkhBwaSJEmSJCnkwECSJEmSJIUcGEiSJEmSpJADA0mSJEmSFHJgIEmSJEmS4v8AmLU7cDFy39wA
 AAAASUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFqCAYAAAAOZrPAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8TFf/B/DPTCb7vgpJhESIrdaofaex1U4tKVVb+2uU
 lApKUFtRtGiri6UopWpXVaGiQkKV2veI7Ps22SYz9/eHylMlJomZuTOTz/v18nqauXfO+UyfynfO
@@ -7075,16 +7048,15 @@ MxOLxQKAXq/HYrHQoUMHsrKyKCgoACApKcnmDoBCiOola7MLISr81zSLxULbtm2ZO3cuFy5cYObM
 mXh6euLv709gYCD16tVj+vTpTJs2jdOnT7N9+3bS09NZvnw5FouFwMBAEhMTbW6dKoSoPlLMhRBC
 CBcn0+xCCCGEi5NiLoQQQrg4KeZCCCGEi5NiLoQQQrg4KeZCCCGEi5NiLoQQQrg4KeZCCCGEi/s/
 XmhwMmPgisEAAAAASUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfsAAAFqCAYAAAAdsfM0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVFX/B/DPnRlWAQFBBEE2ccPMXFJzyT3zMcvETMUl
 LbVSK3PB3MvUtO15NM32JzTTSit9zDKs9CemluGCgCubosi+DrPd3x/IKCqicO+sn/fr5SuZufec
@@ -7384,16 +7356,15 @@ h/GJ6BYGgwFr1qxB+/btkZ6ejkcffRTDhg1Do0aNcOTIEej1egCAUqmEXq/H/fffj4SEBKSmpgIA
 1q1bV21XRiIyL66NT0S3PHqn1+sRGRmJ1157DZcvX8arr74KR0dH+Pr6wt/fH56ennjppZcwY8YM
 XLhwAd999x0OHDiAf//739Dr9fD398fq1avvestcIpIXkz0REZGN4zA+ERGRjWOyJyIisnFM9kRE
 RDaOyZ6IiMjGMdkTERHZOCZ7IiIiG8dkT0REZOP+Hy/qCWRSluZiAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFqCAYAAAAOZrPAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlclOX+P/7XPQMzLDOsroiKmkvnY2qalWWW6SkzK3cx
 wEwrW9R+aXnk9HUrTdPMTpCVWVmomZ6wU5081rE6WpqZZmaKloqKICDbMAvMdv/+GGcAAZntngVe
@@ -7745,16 +7716,15 @@ XbuWvr4+tm7dSmZmJmFhYXR0dKAoCgD+/v4oikJSUhJdXV28e/cOgJqaGtecuhDi75N3swshPH6a
 pigKCQkJHDt2jE+fPnH48GHmz59PeHg4arWaxYsXc/DgQQ4cOIDVaqW5uZn29nYuXbqEoiio1WoM
 BsOkti4VQkyfFHMhhBDCx8kwuxBCCOHjpJgLIYQQPk6KuRBCCOHjpJgLIYQQPk6KuRBCCOHjpJgL
 IYQQPk6KuRBCCOHj/gGvolWf/gDPhAAAAABJRU5ErkJggg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgcAAAFqCAYAAACOI/kiAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd4VHX2P/D3vdNrKkmAUCNFxQaigICi6LK6FhQWkSKK
 oKuCgqhgAVQUlVXcBV2QXdffAtavKOLacREFQUREEUIPpPdMMpPp9/7+uHMnCclk+twp5/U8Pk+Y
@@ -8215,16 +8185,15 @@ Pn36oKysDMOHD8fYsWPRoUMHHD9+HAaDAQDg6OgIg8GA3r174+TJk/jxxx8BAGvXrpXGJBCR/eGz
 FYio0a2MBoMBvXr1wqJFi3D16lXMmzcPLi4u6NSpE7p06YJ27dph7ty5iI2NRUlJCXbu3IlDhw7h
 448/hsFgQJcuXZCammryOF4ish8MDoiIiMgEuxWIiIjIBIMDIiIiMsHggIiIiEwwOCAiIiITDA6I
 iIjIBIMDIiIiMsHggIiIiEz8fypgIoi3ilk6AAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFmCAYAAAB5pHO7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl4lNX58PHvM3sm+76zEzYRN3BBFEQtLrUuqFVAa7Ha
 16p1q1Zs3erSaq39iS3WpVoBd7Fq3UFlEWURZE+QkBCy7/vsM+8fkxkIJJmZZCaTSe7PdXFd8uRZ
@@ -8727,16 +8696,15 @@ CbPZjA4dOmD//v04efIkAODNN9+025WOiLyLa7MTUZ2paWazGW3btsVf//pXnD9/HtOmTYNarUZc
 XBwSEhIQHR2NKVOmYPLkycjPz8f69euxY8cOvP766zCbzUhISMCiRYvstholIu9hMSciIpI5drMT
 ERHJHIs5ERGRzLGYExERyRyLORERkcyxmBMREckcizkREZHMsZgTERHJHIs5ERGRzP1/7BuhaiRU
 pLcAAAAASUVORK5CYII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd4FHX+B/D3luymbHojQEhCpCMgReAnKE0OaaJ0QpRy
 AqfiKXgCeoIogoIcd4K9cQYEUcHKKYoFlA7SSWgJIYX0tskm2+b3x2YHAgkbIDuzm32/nsdHspmd
@@ -9071,16 +9039,15 @@ eXl5HB0dBbzXGMPjx48ZHh4GCGgbLiK3hy4liEgAn8+H1+slNTWV7e1tcnJyePr0KdHR0aysrGCM
 AeDu3bsYY3j06BGrq6tsbm4CMDQ05NdxUURuD/VKEJGAxxWNMTidTpqamvj69SsvX74kNDSUmJgY
 HA4HERER1NTUUF1dzcbGBtPT0ywtLTEwMIAxBofDgcfj8WsjLCK3gxIDERERsehSgoiIiFiUGIiI
 iIhFiYGIiIhYlBiIiIiIRYmBiIiIWJQYiIiIiEWJgYiIiFj+AubyddzFXjjUAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd8VGXWB/DfnZreCwkJBJCIXREUkSJFcQWlCAqSKBr7
 S3hXRAVRQKUtyLKvxAa7ygooogR31V1FUQQXBV2KtNADhPTep973j2RuEkkymTAz987M7/v57GfJ
@@ -9452,16 +9419,15 @@ qqoUFhYydepUmpqamDt3LvPnzyciIoILFy6gKAoAAQEBKIrClClTuHz5Mnfv3gVg//79PisuCiEG
 DlkrQQjh9++KiqJgMpnIzs7m0aNHbN68mcDAQIYPH05kZCShoaFs3LiRDRs20NDQwIkTJ6ipqeH7
 779HURQiIyOx2Ww+ywgLIQYGCQyEEEIIoZFbCUIIIYTQSGAghBBCCI0EBkIIIYTQSGAghBBCCI0E
 BkIIIYTQSGAghBBCCI0EBkIIIYTQ/AuCsi7duHzDcwAAAABJRU5ErkJggg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd8U/X6B/DPyejejNLS0kIZRREURAQZMi6iLEGmtAhW
 ZUi5WlCGyBJBGZfrBX4OHFxLFVFBRb2uKkORIUNAaGW2lpbula4kzfn90eZApSUdOTlN+nm/Xrxe
@@ -9797,16 +9763,15 @@ YrEYoVCIcDjM7Ows3d3dNDU1EY1GE15rmiaVlZUsLCwAJIznFpHUoVsJIpIgHo9jGAYVFRWEw2Hq
 7u6OoaEhMjMzycvLo7CwkOzsbAYHBxkYGCAUChEMBtnb22Nubg7TNCksLMTj8bwbCywiqUHBQERE
 RCy6lSAiIiIWBQMRERGxKBiIiIiIRcFARERELAoGIiIiYlEwEBEREYuCgYiIiFj+AHPGRQLBAvn5
 AAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl8TOf+B/DPmSyTfUMkJCIiaLn0Kr9yqdpLSzchQkaV
 tlwV2lBSLRFVlKq2Caobt+FWtaXb7VVtulB79VJbbElIiOzbRGS28/sj5tRIYojMOUnm8369+nqZ
@@ -10069,27 +10034,26 @@ a9euBYBqlzQnosaDpxKIqBqTyYTExETcc889uHDhAoYPH47HH38czZo1w8GDB2E0GgEADg4OMBqN
 DISPjw9mzpyJGTNmID09HV988QV2796Nt99+G0ajEYGBgVixYoXF5YeJqHFgMCAiIiIJTyUQERGR
 hMGAiIiIJAwGREREJGEwICIiIgmDAREREUkYDIiIiEjCYEBERESS/wcSEDIjGo+4wgAAAABJRU5E
 rkJggg==
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_text output_subarea ">
 <pre>
 &lt;matplotlib.figure.Figure at 0x10f3ec390&gt;
 </pre>
-</div>
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgUAAAFqCAYAAACK1ikfAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlUVeXixvHvYQYRFRVxQBRynsrUtJxxIKfUNCNFM0sb
 JMuczTHnobqBZdqMpmZpZZp6Q1PLuXKeE1QQZ5RBZDrn94fKL28iKBw2w/NZi4Wcs8/ez2HdG8/Z
@@ -10447,16 +10411,15 @@ lIaGBgAKCgq03xwIIVyHrH0ghLD7L4kWi4XQ0FAyMzO5cOECy5cvp2/fvvj5+TFkyBB8fHxYtmwZ
 aWlp1NfXs2vXLsrLy/nkk0+wWCwMGTKE3Nxcm+XAhRC9nyQFQgghhADk8YEQQgghukhSIIQQQghA
 kgIhhBBCdJGkQAghhBCAJAVCCCGE6CJJgRBCCCEASQqEEEII0eVfw+OTf57A/u0AAAAASUVORK5C
 YII=
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgUAAAFqCAYAAACK1ikfAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVOX+B/DPmYEZ9s0FMXBBMUpvek1Tr1q5ZOSaOyrj
 RprdK3YvWi6Ve2qi8rsXzMoyb0i5JFZ2y+zSNUsTNdPcIDdcWEV2GBiYOb8/gElCmNGZM8MMn/fr
@@ -10730,16 +10693,15 @@ rxMciKjx4+UDIqpDp9MhJiYG3bp1w40bN/Dcc89h9OjRaNasGU6cOAGtVgsAkMvl0Gq16Nq1K06f
 Po3U1FQAwNtvv11rxUgisg1c+4CI6tySqNVq0blzZyxZsgSZmZmYP38+FAoFWrRoAT8/P3h5eeHl
 l1/GvHnzcO3aNezduxdHjhzBP//5T2i1Wvj5+SEqKqrWksVE1PgxFBAREREAXj4gIiKiagwFRERE
 BIChgIiIiKoxFBAREREAhgIiIiKqxlBAREREABgKiIiIqNr/AxrW9NiPLZMWAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgcAAAFqCAYAAACOI/kiAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XlcVOX+B/DPYRn2YXE3EBQ1TG91XXLXXLPFHRUF1CI1
 u2KJlkuK+4rm7UJWWupPxNQSK7tdsyyXMnELd6gUNQQFQfZ1Zp7fHzSTI8sAcmZg+Lxfr145Z86c
@@ -11049,16 +11011,15 @@ ORINGjTA6dOnoVarAQCWlpZQq9V46qmnEBsbixv/394d2koIRVEUPQo9BvFqoDcQOFpAYeiCMqiD
 kTTxkq9vfgWTrFXFTm5uzvebJDnPs6whAr/FtgLw75Wx955pmrJtW973zbquGYYh4zimtZbP55Nl
 WTLPc57nyXVdue87x3Gk957WWvZ9L9PAwO8QBwBA4awAABTiAAAoxAEAUIgDAKAQBwBAIQ4AgEIc
 AADFH0C1/cRMPtOiAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFqCAYAAABh4ZIcAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XdYFNf+BvB3l14FLAiCoihqNOrPSNTYazC22EXAeE2s
 15JgEtGoqNHY09RETfMGjSWJJjfNRIkJxoLtYgGxISiCgCC9Lbvn94dh4gq4lG2w7+d5fB53Znbm
@@ -11396,16 +11357,15 @@ hsG2bdu4fPkywLRts0Vk/tBPCSIyjcfjwel0snXrVgYGBoiPj2ffvn0EBgbS1dWFYRgAeHl5YRgG
 W7Zs4eHDh7x8+RKAmpqaKTseisj8ob0SRGTa3xUNw8Bms1FcXMzbt285efIkPj4+BAUFERISwvLl
 yzl+/Di5ubn09/fT1NREZ2cnVVVVGIZBSEgIDodjypa/IjI/KDEQERERk35KEBEREZMSAxERETEp
 MRARERGTEgMRERExKTEQERERkxIDERERMSkxEBEREdN/ACQ3xyXVYIqyAAAAAElFTkSuQmCC
-"
->
-</div>
+">
 
 </div>
+</div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
 
-<div class="output_png output_subarea ">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfMAAAFqCAYAAAAOZrPAAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlclOX+//HXsIuACwpqmIiZmpVmWu65llmW5hYJdtST
 pomVueAuhkuamcKxrE75Cz0uldapTEsyMSml0zGX3BVXQnEFRFnm/v3RN06kOKhzzzjyfj4ePB7O
@@ -11639,23 +11599,21 @@ AODu7k5BQQENGjRgy5YtpKamAjB//vzCc+oiYj49m11ELrs1raCggPr16zN27Fh+++03XnnlFby8
 vKhcuTJVq1alfPnyvPjiiwwbNoyDBw/yySefsHHjRubOnUtBQQFVq1Zl1qxZRZY1FhHzKMxFRERc
 nA6zi4iIuDiFuYiIiItTmIuIiLg4hbmIiIiLU5iLiIi4OIW5iIiIi1OYi4iIuLj/D/8Kn2SzETpA
 AAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[158]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># The next step is to start looking at the accuracy of the polls.</span>
 
 <span class="c"># This function determines the party from the colour.</span>
@@ -11733,16 +11691,16 @@ In&nbsp;[158]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[158]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
-<div class="output_html rendered_html output_subarea output_pyout">
+<div class="output_html rendered_html">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
   <thead>
@@ -11803,18 +11761,18 @@ In&nbsp;[158]:
 </div>
 
 </div>
-
-</div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[161]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># We can grab all the data and put it into a single dataframe.</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;http://www.realclearpolitics.com/epolls/2010/governor/2010_elections_governor_map.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="s">&#39;ignore&#39;</span><span class="p">)</span>
@@ -11826,16 +11784,14 @@ In&nbsp;[161]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[190]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># We can now make a histogram of the errors.</span>
 <span class="c"># The conclusion is that polls are almost certainly 10% of the actual result.</span>
 
@@ -11847,16 +11803,15 @@ In&nbsp;[190]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfwAAAFkCAYAAADFZ4k9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtwVPX9xvFncwOS3URA4xT4mWqaIBqTTiAUEGLaaWm0
 WLUYMcEgo1XBwWqjSJRLsCjgBVMtVBB1qlvkIkar1loVLynEgg1KQWi0a4hSVC4WurtAssme3x+U
@@ -12011,23 +11966,21 @@ ohQMBo9Z18no2bPnCbdlWdYx67QsS42NjZKkHj16nNS2ANPxtTzAAOecc4727dunzZs3S5JeffVV
 AbSOx+MC6LDt27frnXfe0cSJEyVJN998s6666irl5eV1aV0AWsYRPoAO69evnzZv3qxLL71UkjRq
 1CjCHghzHOEDAGAAbtoDAMAABD4AAAYg8AEAMACBDwCAAQh8AAAM8P8NnkSnvhGdgAAAAABJRU5E
 rkJggg==
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[201]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Here are some standard deviations:</span>
 <span class="k">print</span> <span class="s">&#39;Standard deviations...&#39;</span>
 <span class="k">print</span> <span class="s">&#39;Within one week:&#39;</span><span class="p">,</span><span class="n">alldata</span><span class="p">[</span><span class="n">alldata</span><span class="p">[</span><span class="s">&#39;forecast_length&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
@@ -12037,14 +11990,13 @@ In&nbsp;[201]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Standard deviations...
 Within one week: 4.89516554269
@@ -12059,29 +12011,28 @@ Total: 6.02228543358
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[226]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># As you can see there are some outlier numbers from the Cutler poll (http://www.realclearpolitics.com/epolls/2010/governor/me/maine_governor_lepage_vs_mitchell_vs_cutler-1231.html)</span>
 <span class="n">alldata</span><span class="p">[</span><span class="n">alldata</span><span class="p">[</span><span class="s">&#39;error&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[226]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
-<div class="output_html rendered_html output_subarea output_pyout">
+<div class="output_html rendered_html">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
   <thead>
@@ -12141,6 +12092,7 @@ In&nbsp;[226]:
 </div>
 </div>
 
+</div>
 </div>
 
 </div>

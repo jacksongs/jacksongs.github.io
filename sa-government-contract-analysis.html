@@ -1745,13 +1745,12 @@ init_mathjax();
 <p>Hit me up on Twitter if you have any suggestions: <a href="http://www.twitter.com/jacksongs">@jacksongs</a>.</p>
 <p><em>Update: I should mention that there is a $500,000 threshold under which contracts for goods and services do not have to be disclosed (though contracts with consultants still do). The effect of this threshold is pretty obvious in this data, as you can see...</em></p>
 <p>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[250]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># The imports...</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -1762,16 +1761,14 @@ In&nbsp;[250]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[251]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Let&#39;s get our contract data in.</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;data.csv&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -1780,16 +1777,14 @@ In&nbsp;[251]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[349]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># First let&#39;s have a look at how empty it is.</span>
 <span class="n">name</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;Error Type:&#39;</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -1797,35 +1792,33 @@ In&nbsp;[349]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[349]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
 
-<div class="output_text output_subarea output_pyout">
 <pre>
 382
 </pre>
-</div>
-
-</div>
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[350]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Nice! Okay, so let&#39;s make a dataframe without these empty values.</span>
 <span class="c"># Note that I have checked that each of the rows I consider are &#39;empty&#39; are actually empty by inspecting the name dataframe.</span>
 
@@ -1838,16 +1831,14 @@ In&nbsp;[350]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[256]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># First, I&#39;m interested in costs. Let&#39;s make another dataframe just with the contracts with a value.</span>
 
 <span class="n">dfc</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s">&#39;Total inc GST&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span>
@@ -1863,16 +1854,15 @@ In&nbsp;[256]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAFhCAYAAACGfVh6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAEg5JREFUeJzt3XGs7mdB2PHvhdJa9d46lcq2qFj1Mc22xqhMbWkLaREh
 JUx0LJYoulgcMmLEhM2mI9E1w0QhG26rWuegY/rHCCNjrJWoW1rvlrEZxiCoz+q2ZJlOKNre4qS0
@@ -1956,23 +1946,21 @@ fYzxl8YYvzrG+LdjjHeNMY5t5/1+mw9a2Xl0/I+vmV/d3eZyxfsi6ABwAE9wPfY723z89AvbRPqN
 23nvm3P+39MevvOa7Z/sAJ9TctF+HwgAPKErqzvGGFXPquYuc0+0ifrH21yv/cH9/qP20AHg6fWb
 1Xdt99Bvrd67y9w/vmZ+9ZL+9OW398QeOgA8PU59Jvxrq382xrhoO/bXzzCv6vbqHWOMW9rspd/8
 WV8lAAAAAAAAAAAAAAAAAAAAF4T/B7qZKlvkPKuLAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[255]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Well that looks a bit crap. Let&#39;s try again, but only with values less than 2 million.</span>
 
 <span class="n">twomil</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">[</span><span class="n">dfc</span><span class="p">[</span><span class="s">&#39;Total inc GST&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">2000000</span><span class="p">]</span>
@@ -1982,16 +1970,15 @@ In&nbsp;[255]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfwAAAFVCAYAAAAKQV01AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAFR9JREFUeJzt3X2MHPV5wPGvsY2xxd2VEgx5hULyVFYlUqCECgIUiYZA
 UajyT1LSiKLGDhQQiBCUOgQUZEpSalqQgCLyYihpGoECTUoxRIlUO24bioJokdM+OBRoFBregn28
@@ -2089,23 +2076,21 @@ uP0GUkQcSuc0+5WZuaaZPNA/f23cS78X3m9/MHwR+HJETPyjOZ/OUf4dzUUmG4F7m6tObwbW09lp
 XJmZWyPiNuDOiFhP59MW5zbPM/H2wHzgoYmr8Ztx/9I8x5+0soZz13jz5ydoZ3td1Ixd1TzHcuCF
 Sc+h3TOx/S4AbomIbcBzwIrmtLHbb/CspHMK/eqImHgv/1LgZn/+JEmSJEmSJEmSJEmSJEmSJEmS
 JEmSJEkafP8HTMDXv0AGnIoAAAAASUVORK5CYII=
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[316]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Clearly we see a cluster just over $500,000. Now let&#39;s try to do the same over each year.</span>
 
 <span class="c"># Finally, let&#39;s convert our data columns to actual dates.</span>
@@ -2117,16 +2102,14 @@ In&nbsp;[316]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[325]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Now let&#39;s start plotting. First, grouping year in completion date.</span>
 
 <span class="n">comp</span> <span class="o">=</span> <span class="n">twomil</span><span class="p">[</span><span class="n">twomil</span><span class="p">[</span><span class="s">&#39;Completion Date&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
@@ -2147,16 +2130,15 @@ In&nbsp;[325]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHgAAAI4CAYAAAARel4VAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8ZFWd//9XZaks3Umv0OxCCwcRBEERZBGYYWT4OiMO
 o+MyKOIgLogLOIzS8xt1JIOioIOCIqjgMi4ogqiADo5syqICgiyHpm32Xuk1nT35/VHVGtuuW0mn
@@ -2656,23 +2638,21 @@ Y7wxhPA1krtoPU+Sj4+QXEi0v311PslpT3cBryJpjH0x/VmfS7+/t54m4IX052wHtu60vkkks2te
 fI6SXBdnY/r9v95pX/0zyYWdW4F90+/fUqK2X5Jcg+fN6T78M5LrCg2lts70Z/16uvyKfv4fy9VW
 5CyCr1kHymOkr1klSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
 SZIkSZIkSWPM/wfPwB8ErYG7rQAAAABJRU5ErkJggg==
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[333]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Now, let&#39;s try start date.</span>
 
 <span class="n">sta</span> <span class="o">=</span> <span class="n">twomil</span><span class="p">[</span><span class="n">twomil</span><span class="p">[</span><span class="s">&#39;Starting Date&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
@@ -2693,16 +2673,15 @@ In&nbsp;[333]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHgAAAFgCAYAAADAT84SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XmcHFW9//939/T0bJklCSFhEVlPSEISCIRNVm8UuPoT
 xOuOCygoIoKCiIwXFWlxIyKbcNmCghvIIiKbsiSEJYQlISRwsu8kmWQya2bpmf7+0R1/Y5iqnqW6
@@ -3040,23 +3019,21 @@ eT2+PjW2OuDf0a+1wLYMe014dc17cxTfx2ZzfP1DGWP7Fr6x8xBgv/j6li58uw/fg2canug5CU++
 Fepbpr0H8eVZrXhi7IP4psnF2KtkPQohhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBC
 CCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQoI/4H
 cKdmtB29gDMAAAAASUVORK5CYII=
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[335]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># And now execution date.</span>
 
 <span class="n">exe</span> <span class="o">=</span> <span class="n">twomil</span><span class="p">[</span><span class="n">twomil</span><span class="p">[</span><span class="s">&#39;Execution Date&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
@@ -3077,16 +3054,15 @@ In&nbsp;[335]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_png output_subarea ">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHgAAAFgCAYAAADAT84SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XmYXFWd//FPrb0k3Z2FBAgQCMuBsCRsIbLDTxQQxwi4
 zjCjKIuKiKOISjuDID0gyDIgKLKqoCI7imzKkgQxEQiQDU72fU+n96V6+f1RFaeJqVvdXbdunVv9
@@ -3419,28 +3395,25 @@ eQ3wy5TSfDP7Cf4tWm/g/jgdLybl5eqH+LKnx4EP4oWxi/DCy6vx+lLfBgP/CV1LgHVl8Ybhs2ve
 G6P4Pjar4vX3lPXtO/jGziOBPeP1aypouwPfg2cqXug5Gi++VautPN7d+PKstXhh7MP4psm1xOvP
 fhRCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQ
 QgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgjRQPwfA9wO0BMyvdoAAAAASUVORK5CYII=
-"
->
-</div>
-
-</div>
+">
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[346]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># The $500,000 threshold is obviously significant overall. </span>
 <span class="c"># The question I would like to ask is how much are we not seeing to the left of the threshold line.</span>
 </pre></div>
 
-</div>
 </div>
 </div>
 

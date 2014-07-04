@@ -1742,13 +1742,12 @@ init_mathjax();
 <p>It took about 30 minutes to write. I hit some trouble with some unanticipated blank spots. Ultimately it ran through in a couple of hours, as you can see from the times listed.</p>
 <p>Drop me a line on Twitter if you have any questions: <a href="http://www.twitter.com/jacksongs">@jacksongs</a>.</p>
 <p>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[68]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># First, some imports.</span>
 
 <span class="kn">from</span> <span class="nn">pattern.web</span> <span class="kn">import</span> <span class="n">URL</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="n">plaintext</span>
@@ -1759,16 +1758,14 @@ In&nbsp;[68]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[3]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Next, some preliminary steps.</span>
 
 <span class="c"># This is the base URL. We will be appending a number at the end of this.</span>
@@ -1777,16 +1774,14 @@ In&nbsp;[3]:
 
 </div>
 </div>
-</div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[107]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># This is the scraper</span>
 
 <span class="c"># This reads the backup data and puts its back into the &#39;row&#39; dictionary</span>
@@ -1873,14 +1868,13 @@ In&nbsp;[107]:
 
 </div>
 </div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 1500 2014-06-04 15:11:06.162936
 2000 2014-06-04 15:13:49.933822
@@ -1905,10 +1899,11 @@ Ended at: 2014-06-04 16:24:15.793143 , at id: 9723
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[107]:</div>
+<div class="box-flex1 output_subarea output_pyout">
 
-<div class="output_html rendered_html output_subarea output_pyout">
+<div class="output_html rendered_html">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
   <thead>
@@ -2065,24 +2060,23 @@ Ended at: 2014-06-04 16:24:15.793143 , at id: 9723
 </div>
 
 </div>
-
-</div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[110]:
 </div>
-<div class="inner_cell">
-    <div class="input_area">
+<div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># And now we export the data as a csv...</span>
 
 <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">&#39;data.csv&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
 </div>
 </div>
 
